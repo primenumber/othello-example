@@ -17,8 +17,8 @@ std::string load_str(std::string filename) {
 
 int main(int argc, char **argv) {
   if (argc < 4) {
-    std::cerr << "usage: " << argv[0] << " [PLAYER] [INIT] [BOARD]";
-    std::cerr << "example: " << argv[0] << " WHITE BLACK init.txt";
+    std::cerr << "usage: " << argv[0] << " [PLAYER] [INIT] [BOARD]" << std::endl;
+    std::cerr << "example: " << argv[0] << " WHITE BLACK init.txt" << std::endl;
     return 1;
   }
   Turn player = str_to_turn(argv[1]);
