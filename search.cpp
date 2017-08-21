@@ -15,7 +15,7 @@ int search_eval(const Board &bd, const Turn &turn, int depth) {
     }
   }
   if (max_score == -INF) {
-    return search_eval(bd, opponent(turn), depth-1);
+    return -search_eval(bd, opponent(turn), depth-1);
   }
   return max_score;
 }
