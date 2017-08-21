@@ -25,11 +25,11 @@ int main(int argc, char **argv) {
   Turn turn = str_to_turn(argv[2]);
   Board bd(load_str(argv[3]));
   while (!is_gameover(bd, turn)) {
+    std::cout << board_to_str(bd) << std::endl;
     if (turn == player) {
       Position p = search(bd, turn);
       std::cout << pos_to_str(p) << std::endl;
       bd = move(bd, turn, p);
-      std::cout << board_to_str(bd) << std::endl;
     } else {
       std::string pos_str;
       std::cin >> pos_str;
