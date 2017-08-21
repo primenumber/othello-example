@@ -30,7 +30,6 @@ int main(int argc, char **argv) {
       std::cout << pos_to_str(p) << std::endl;
       bd = move(bd, turn, p);
       std::cout << board_to_str(bd) << std::endl;
-      turn = Turn::WHITE;
     } else {
       std::string pos_str;
       std::cin >> pos_str;
@@ -40,8 +39,8 @@ int main(int argc, char **argv) {
         std::cerr << err << std::endl;
         continue;
       }
-      turn = Turn::BLACK;
     }
+    turn = opponent(turn);
   }
   return 0;
 }
