@@ -14,7 +14,7 @@ class Position {
       pass = true;
     } else {
       pass = false;
-      x_ = str[0] - '@';
+      x_ = str[0] - 'A' + 1;
       if (x_ < 0 || x_ >= 10) throw "invalid string x";
       y_ = str[1] - '0';
       if (y_ < 0 || y_ >= 10) throw "invalid string y";
@@ -31,7 +31,7 @@ class Position {
 inline std::string pos_to_str(const Position &pos) {
   if (pos.is_pass()) return "ps";
   std::string res;
-  res += '@' + pos.x();
+  res += 'A' + pos.x() - 1;
   res += '0' + pos.y();
   return res;
 }
