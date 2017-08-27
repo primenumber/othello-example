@@ -2,7 +2,7 @@ othello-example
 ====
 
 オセロAIのサンプルプログラムです
-minimaxアルゴリズムが実装されています
+alpha-betaアルゴリズムが実装されています
 
 `main.cpp` メインプログラム
 `board.cpp` 盤面操作
